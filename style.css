@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    position: relative;
+    width: 800px;
+    height: 450px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+    border: 2px solid black;
+    border-radius: 30px;
+    background: linear-gradient(90deg,rgb(4, 15, 78), rgb(113, 64, 226));
+}
+
+h1{
+    font-family: 'Henny Penny', cursive;
+    font-size: 80px;
+    color: white;
+    padding-left: 40%;
+    visibility: hidden;
+    transition: 1s;
+    opacity: 0.0;    
+}
+
+p {
+    color: white;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 2.5rem;
+    padding-left: 40%;
+    transition: 1s;
+    visibility: hidden;
+    opacity: 0.0;
+}
+
+a{
+    display: inline-flex;
+    background-color: white;
+    border: 2 solid black;
+    border-radius: 10px;
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+    margin-left: 40%;
+    visibility: hidden;
+    transition: 1s;
+    opacity: 0.0;
+}
+
+img {
+    height: 400px;
+    bottom: 0%;
+    left: 35%;
+    position: absolute;
+    transition: 1s;
+}
+
+
+.card:hover img{
+    left: 60%;
+    height: 500px;
+}
+
+.card:hover h1{
+    padding-left: 0%;
+    visibility: visible;
+    opacity: 1.0;
+}
+
+.card:hover p{
+    padding-left: 0%;
+    padding-right: 40%;
+    visibility: visible;
+    opacity: 1.0;
+}
+.card:hover a{
+    margin-left: 0%;
+    visibility: visible;
+    opacity: 1.0;
+}
+
+@media (max-width: 991px) {
+
+    .card:hover img{
+        height: 350px;
+    }
+
+    .card .content {
+        width: 100%;
+        left: 0;
+    }
+
+    h1{
+        font-size: 35px;
+    }
+    p{
+        font-size: 15px;
+        line-height: 1.5rem;
+    }
+    a{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 360px){
+    .card:hover img{
+        height: 250px;
+    }
+}
